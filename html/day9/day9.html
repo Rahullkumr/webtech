@@ -1,0 +1,78 @@
+<!-- 
+naukri 
+glassdor
+foundit
+monster 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Some more form related attributes</h2>
+    <form action="">
+        <label for="un">Username:</label>
+        <input type="text" id="un" autofocus required>
+        <span style="color: red;">*</span><br><br>
+
+        <label for="adhr">Aadhar number:</label>
+        <input type="text" id="adhr" required maxlength="12">
+        <span style="color: red;">*</span><br><br>
+
+        <label for="mno">Mobile number:</label>
+        <input type="text" id="mno" value="+91 " required minlength="10" maxlength="14">
+        <span style="color: red;">*</span><br><br>
+
+        <label for="pwd">password</label>
+        <input type="password" id="pwd" required minlength="8">
+        <span style="color: red;">*</span><br><br>
+
+        <input type="text" readonly name="" id="" placeholder="I am placeholder" value="value is given more preference than placeholder"><br><br>
+        <!-- always use readonly with input fields -->
+
+        <button disabled>click kr k dikhao mujhe</button><br><br>
+        <!-- always use disabled with buttons -->
+
+        <label for="html">html</label>
+        <input type="checkbox">
+        <label for="css">css</label>
+        <input type="checkbox">
+        <label for="JavaScript">JavaScript</label>
+        <input type="checkbox" checked>        
+        <br><br>
+        <button>Login</button>
+    </form>
+
+    <h2>new form </h2>
+    <form action="" method="get/post">
+        <input type="text" placeholder="hello" name="I am value of name">
+        <input type="submit" name="" id="">
+    </form><br><br>
+
+
+    <!-- dropdown list -->
+     <fieldset>        <!-- gives border to the form -->
+        <legend>Login form</legend>     <!-- mast chij -->
+        <form action="">
+            <select name="" id="">
+                <option>--choose one option--</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Goa">Goa</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="UP">UP</option>
+                <option value="Kerala">Kerala</option>
+            </select><br><br>
+            <textarea name="" id="" rows="10" cols="50">I am textarea</textarea><br><br>
+            <details>
+                <summary>Accordian</summary>
+                built using details and summary tag
+            </details><br><br>
+            <input type="submit" name="" id="">
+        </form>
+    </fieldset>
+</body>
+</html>
