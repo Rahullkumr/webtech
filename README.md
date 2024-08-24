@@ -2,4 +2,4 @@
 
 webtech notes
 
-1. HTML
+1. HTML [Click for Notes](https://www.saketbhatnagar.in/html)
