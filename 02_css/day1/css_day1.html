@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css day1</title>
+    <style>
+        p{
+            background-color: aqua;
+        }
+        #priority{
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 
+    cascading means priority wise
+    key ==> attribute
+    value ==> property;
+     -->
+    <h3 style="color: red;">Inline css</h3>
+    <p> this is styled using internal css </p>
+    <h2 id="style_me"> styled using External css </h2> <hr> 
+
+
+
+
+
+    <h2 style="color: red;" id="priority">checking priority of inline, internal and External</h2>
+    <!-- 
+            1. Inline highest priority
+
+            2. then, jo last me ayga uska apply hoga (Internal or External me se)
+                baad wala override kr dega first wale ko
+    -->
+
+
+
+
+
+    <div id="box" class="container"> checking selectors priority</div>
+
+<!-- targeting multiple elements using class name -->
+
+    <h2 class="c">Hello CSS</h2>
+    <p class="c">You are so beautiful</p>
+    <b class="c">It is bold tag</b>
+
+
+
+
+
+<!-- checking !important priority -->
+    <h6 id="h_6"> 
+        checking !important priority
+    </h6>
+
+
+
+
+
+    <!-- grouping selectors -->
+    <h1>heading1</h1>
+    <h2 class="ele">heading2</h2>
+    <p class="ele">paragraph</p>
+    <blockquote id="bq">Live in the moment</blockquote>
+
+
+</body>
+</html>

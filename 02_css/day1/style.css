@@ -1,0 +1,60 @@
+/* 
+every webpage must have following properties using universal selector(i.e *): 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+*/
+
+
+#style_me{
+    border: 2px solid blue;
+    border-radius: 50px;
+    padding: 10px;
+}
+#priority{
+    color: blueviolet;
+}
+div{
+    background-color: beige;
+    height: 100px;
+    width: 200px;
+}
+
+
+
+/* checking priority of inline, internal and External css*/ 
+#box{
+    color: green;
+}
+.container{
+    font-size: 20px;
+}
+.c{
+    color: blue;
+    background-color: brown;
+}
+
+
+
+/* checking !important priority */
+#h_6{
+    color: green;
+}
+h6{
+    background-color: aliceblue;
+    color: rgb(206, 103, 202) !important;
+    font-size: 30px;
+}
+
+
+
+/* grouping selectors */
+h1, .ele, #bq{
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
