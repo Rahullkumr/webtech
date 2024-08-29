@@ -23,8 +23,15 @@ id(unique name sochne ka effort) > class(class name sochne ka effort) > tagname(
 
 ## Types of selectors
 
-1. id (#)
-2. classname (.)
-3. tagname 
-4. grouping selectors (,)
-5. universal selector(*)
+I. simple selectors
+
+    1. id (#) 
+    2. classname (.)
+    3. tagname
+    4. grouping selectors (,)
+    5. universal selector (*)
+
+II.
+III. 
+IV. 
+V. 
