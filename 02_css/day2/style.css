@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* child selector */
+
+/* section>main>h1{
+    background-color: green;
+    color: white;
+} */
+
+
+
+
+
+/* descendent selector */
+
+/* section h1{
+    color: red;
+} */
+
+
+
+
+
+/* adjacent selector */
+/*only h1 will be targeted; + k baad jo rhega wohi target hoga*/
+
+/* p+h1{
+    border: 5px solid green;
+    background-color: rgb(222, 222, 148);
+} */
+
+
+
+
+
+/* general sibling selector */
+
+/* .mydiv~#para3{
+    background-color: red;
+}
+.mydiv>h1~p{
+    background-color: rgb(241, 225, 131);
+} */
+
+
+
+
+/* pseudo selectors */
+
+/* h2:hover{
+    background-color: rgb(202, 240, 149);
+    border: 2px solid green;
+    font-size: 52px;
+    color: white;
+    text-align: center;
+} */
+
+
+/* extra practice */
+
+#container{
+    visibility: hidden;
+    font-size: 500px;
+}
+
+button:hover~#container{
+    visibility: visible;
+}
