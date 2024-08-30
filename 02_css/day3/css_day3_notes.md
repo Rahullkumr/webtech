@@ -34,7 +34,6 @@ III. Pseudo selectors
     11. read-only
     12. required
     13. visited
-    14. active
 
 IV. 
 V. 
