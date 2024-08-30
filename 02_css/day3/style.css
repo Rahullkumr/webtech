@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* a:active{
+    color: purple;
+    font-size: 100px;
+    border: 2px solid red;
+} 
+
+input:checked{
+    height: 15px;
+    width: 15px;
+}
+
+input:disabled{
+    border: 5px solid red;
+}
+
+input:enabled{
+    border: 2px solid green;
+}
+
+div:first-child{
+    background-color: tomato;
+}
+
+section:last-child{
+    background-color: aqua;
+}
+
+p:first-of-type{
+    font-size: 30px;
+}
+
+p:last-of-type{
+    font-size: 10px;
+    color: greenyellow;
+}
+
+div:nth-of-type(3){
+    border: 2px solid rgb(159, 55, 152);
+}
+
+
+thead:first-child{
+    background-color: gray;
+}
+
+tr:nth-of-type(even){
+    background-color: rgb(226, 193, 193);
+}
+tr:nth-of-type(odd){
+    background-color: rgb(127, 182, 217);
+}
+
+td:nth-of-type(even){
+    background-color: red;
+}
+
+input:read-only{
+    background-color: red;
+}
+input:required{
+    background-color: greenyellow;
+}
+*/
+
+/* make the link color of anchor tag only green whether it is hovered, visited or active */
+a{
+    color: green;
+    font-size: 25px;
+}
+a:visited{
+    color: green;
+}
+a:active{
+    color: green;
+}
+
