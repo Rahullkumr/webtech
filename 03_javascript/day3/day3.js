@@ -25,13 +25,37 @@ console.log(long)
 // operators               => ==, ===(strictly comparison i.e datatype+value), typeof, Number(int, float, double, long)
 // punctuators/separators  => [] {} () `(backticks) '' " :: : ; , 
 
+
+
+
+
 // literals
-    // 1. primitive 
+    // 1. primitive             
         // - Number, boolean, string, null, undefined, bigint, NaN, symbol
         // eg of bigint: 99999999999999n
 
     // 2. non primitive
         // - array, objects, functions
+
+
+
+
+
+// DATATYPES
+    //        PRIMITIVE           NON-PRIMITIVE
+    //       -----------        ------------------
+    //          - Number            - array
+    //          - boolean           - objects
+    //          - string            - functions
+    //          - null
+    //          - undefined
+    //          - bigint
+    //          - NaN
+    //          - symbol
+
+
+
+
 
 // console.log(Boolean(0))          // false
 // console.log(Boolean(1))          // true
@@ -40,6 +64,10 @@ console.log(long)
 // console.log(Boolean(undefined))  // false
 // console.log(Boolean(''))         // false
 // console.log(Boolean(' '))        // true; kuch to hai, hawa hai
+
+
+
+
 
 // DECLARING STRINGS 
 
