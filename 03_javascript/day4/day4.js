@@ -2,7 +2,8 @@
 
 console.log('holla');
 
-
+// null: if we want to assign a variable a value intentionally
+// undefined: if we declare a variable and try to access it without initialization
 
 // undefined
 var a;              // or var a = undefined
