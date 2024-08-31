@@ -27,7 +27,8 @@ console.log(long)
 
 // literals
     // 1. primitive 
-        // - Number, boolean, string, null, undefined, bigint, NaN
+        // - Number, boolean, string, null, undefined, bigint, NaN, symbol
+        // eg of bigint: 99999999999999n
 
     // 2. non primitive
         // - array, objects, functions
