@@ -1,0 +1,119 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(117, 112, 112);
+} */
+
+
+
+
+
+/* III. pseudo element selectors */
+h1::first-letter{
+    color: red;
+}
+p::first-line{
+    /* entire first line of browser */
+    color: blue;
+}
+#second_para::before{
+    content: "looking ";
+    color: lightblue;
+    font-size: 40px;
+}
+#second_para::after{
+    content: "very beautiful😍 ";
+    color: lightblue;
+    font-size: 40px;
+}
+/* ::marker ==> only for unordered list */
+#p::marker{
+    content: '🍐';
+}
+#m::marker{
+    content: '🥭';
+}
+
+#g::marker{
+    content: '🍇';
+}
+
+#b::marker{
+    content: '🍌';
+}
+
+#a::marker{
+    content: '🍎';
+}
+
+#c::marker{
+    content: '🍒';
+}
+
+#w::marker{
+    content: '🍉';
+}
+
+#o::marker{
+    content: '🍊';
+}
+
+
+
+
+
+/* IV. attribute selectors */
+
+/* [attribute_name] */
+[href]{
+    color: red;
+}
+[target]{
+    font-size: 30px;
+    color: green;
+}
+
+
+
+/* [attribute_name="entire value"] */
+[target = "_blank"]{
+    color: violet;
+}
+
+
+
+/* starts with i.e ^= */
+[title ^= 'fruit-sw']{
+    background-color: yellow;
+}
+
+
+
+/* ends with i.e $= */
+[title $= 'een']{
+    border: 2px dashed;
+}
+
+
+
+/* separated by - */
+/* works when only the first word before - is written */
+[title |= "fruit"]{
+    padding: 10px;
+}
+
+
+
+/* separated by space */
+[title ~= "green"]{
+    font-size: 50px;
+}
+
+
+
+/* any character */
+[title *= "y"]{
+    text-align: center;
+}
