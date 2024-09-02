@@ -1,3 +1,5 @@
+<!-- 28 - aug - 2024 -->
+
 ## Ways of writing css
 
 1. Inline css (style attribute)
