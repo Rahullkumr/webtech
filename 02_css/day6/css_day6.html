@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css day6</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+  <!-- RELATIVE UNITS -->
+
+
+
+  <!-- em -->
+    <section id="sec1">
+      I am Parent with 16px font size
+      <div id="div1">
+        I am child with 2em font-size == 2 times of parent font(i.e 32px)
+      </div>
+    </section>
+    <hr />
+
+
+
+  <!-- rem -->
+    <section id="sec2">
+      section with 16px
+      <aside>
+        aside with 1em (i.e 16px only as the parent is 16px)
+        <div id="div2">div with 1rem (i.e 40px since root (html) is forced to be 40px)</div>
+      </aside>
+    </section>
+    <hr />
+
+
+
+  <!-- converting (inline➡️block) and vice versa -->
+    <section id="sec3">
+        <span id="span1">span converted to block</span><br>
+        <div id="div3">div converted to inline</div>
+     </section><br>
+
+
+  <!-- inline-block -->
+   <table border="1px" cellspacing="0px" cellpadding="0px">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Block</th>
+        <th>Inline</th>
+        <th>Inline-Block</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Width </th>
+        <td>100% of parent element</td>
+        <td>content width</td>
+        <td>content width</td>
+      </tr>
+      <tr>
+        <th>Dimension</th>
+        <td>we can give height and width</td>
+        <td>we can give height and width</td>
+        <td>we can give height and width</td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td>new line</td>
+        <td>same line with another inline element/inline-block</td>
+        <td>same line with another inline element/inline-block</td>
+      </tr>
+      <tr>
+        <th>Examples</th>
+        <td>div, p, h1.....</td>
+        <td>span, a, b, strong.....</td>
+        <td></td>
+      </tr>
+    </tbody>
+   </table><br>      
+
+
+
+    <section>
+        <div id="inline_block_div">div as inline-block</div>
+        <span id="inline_block_span">span as inline-block</span>
+     </section><hr><br>
+
+
+
+    <!-- navbar using inline-block -->
+    <nav id="nav1">
+      <span class="span">Logo</span>
+      <span class="span">Home</span>
+      <span class="span">About</span>
+      <span class="span">Contact</span>
+      <span class="span">Help</span>
+      <span class="span">Blog</span>
+    </nav><br>
+
+    
+
+    <!-- navbar using flex -->
+    <nav id="nav2">
+      <span class="span_flex">Logo</span>
+      <span class="span_flex">Home</span>
+      <span class="span_flex">About</span>
+      <span class="span_flex">Contact</span>
+      <span class="span_flex">Help</span>
+      <span class="span_flex">Blog</span>
+    </nav>
+
+
+
+  </body>
+</html>
