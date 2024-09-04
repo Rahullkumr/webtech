@@ -99,6 +99,7 @@
 
     #nav2{
         display: flex; /* parent ko flex set krte hn */
+        /* flex k sare child inline-block ban jate hain */
         width: 100%;
         height: 90px;
         background-color: rgb(240, 174, 174);
