@@ -6,7 +6,7 @@
     // iife can be called only once because there is no name to call it later
     // it gets called automatically 
     // where to use: to achieve automatic tasks like accept cookies
-    // syntax: (()=>{})()
+    // syntax: (()=>{})();  // ; is must
 
 (()=>{
     console.log('\niife executed');    
