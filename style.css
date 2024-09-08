@@ -1,3 +1,189 @@
-h1{
-    color: red;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* nav bar */
+nav{
+    border: 1px solid red;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 100%;
+}
+
+#dropdowns{
+    font-weight: bold;
+    font-size: 14px;
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#search{
+    background-color: #f5f5f5;
+    width: 400px;
+    height: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#search_icon{
+    margin: 15px;
+}
+
+#search_area{
+    width: 100%;
+    height: 100%;
+}
+#search_area>input{
+    border-radius: 5px;
+    width: 100% ;
+    height: 100%;
+    border: 0px;
+    background-color: #f5f5f5;
+}
+
+#right{
+    font-size: 11px;
+    font-weight: bold;
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#right>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 400 off */
+#offer_sticker{
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#offer_sticker>img{
+    width: 90vw;
+    height: 70%;
+}
+
+/* big brands bash */ 
+
+#big_brands_bash{
+    width: 100vw;
+    height: 399px;
+    display: flex;
+    justify-content: center;    
+}
+#big_brands_bash>img{
+    width: 1306px;
+    height: 399px;
+}
+
+/* coupons corner */
+#coupons_corner{
+    width: 100vw;
+}
+#coupons_corner>img{
+    width: 100%;
+}
+
+/* coupons corner image */
+#coupons_corner_image{
+    width: 100vw;
+}
+#coupons_corner_image>img{
+    width: 100%;
+}
+
+
+/* crazy deals */
+#crazy_deals{
+    width: 100vw;
+}
+#crazy_deals>img{
+    width: 100%;
+}
+
+/* corousal */
+#corousal{
+    width: 100vw;
+    height: 335px;
+    display: flex;
+    overflow: auto;
+}
+#corousal>img{
+    width: 100%;
+    height: 315px;
+}
+
+/* shop by category banner */
+#shop_by_category{
+    width: 100vw;
+}
+#shop_by_category>img{
+    width: 100%;
+}
+
+/* shop by category images */
+#shop_by_category_images{
+    width: 100vw;
+    height: 1490px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#shop_by_category_images>img{
+    height: 280px;
+    width: 207px;   
+}
+
+/* remaining 3 category images */
+#remaining_cat_img{
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#remaining_cat_img>div{
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#remaining_cat_img>div>img{
+    height: 280px;
+    width: 207px; 
+}
+
+/* app install banner */
+#app_install_banner{
+    width: 100vw;   
+}
+#app_install_banner>img{
+    width: 100%;
 }
