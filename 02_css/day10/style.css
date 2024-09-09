@@ -1,0 +1,82 @@
+/* 09 - sept - 2024 */
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* text properties */
+
+p{
+  text-align: center;
+  /* text-align: left; */
+  /* text-align: right; */
+  /* text-align: start; */
+  /* text-align: end; */
+
+  /* text-transform: capitalize; */
+  text-transform: uppercase;
+  /* text-transform: lowercase; */
+}
+
+
+
+div{
+  height: 100px;
+  width: 300px;
+  border: 1px solid;
+  text-overflow: ellipsis;    /* it gives ... to overflow content*/
+  text-wrap: nowrap;
+  overflow: auto;
+  /* overflow: hidden; */
+}
+
+
+
+span{
+  font-size: 50px;
+  /* text-shadow: x-asix y-axis color-spread color; */
+  text-shadow: 10px 10px 10px gray;
+}
+
+
+
+section{
+  text-indent: 200px;   /* gives indentation before the text */
+}
+
+
+/* Text decoration properties */
+
+aside{
+  font-size: 50px;
+  /* text-decoration-line: underline;
+  text-decoration-line: overline;
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 15px; */
+
+  /* text-decoration shorthand property */
+  /* line(underline/overline/line-through) is compulsory */
+  text-decoration: overline red wavy 15px;
+  padding: 20px;
+}
+
+
+
+/* font properties */
+
+main{
+  /* font-family: serif; */
+  /* font-family: sans-serif; */
+  /* font-family: ṃonospace; */
+  /* font-family: cursive; */
+  font-family: fantasy;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* fallback fonts: if a browser doesn't support it then next will be applied */
+  /*  */
+}
