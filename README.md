@@ -8,4 +8,4 @@ webtech notes
 
 # clones
 
-1. Myntra [Let's see](https://rahullkumr.github.io/webtech/)
+1. Myntra [see website](https://rahullkumr.github.io/webtech/) || [see code](https://github.com/Rahullkumr/webtech/tree/myntra_clone)
