@@ -189,7 +189,153 @@ nav{
     width: 100%;
 }
 
+
+
+
 /* footer */
 footer{
-    background-color: #fbfbfb;
+    background-color: #fbfbfd;
+    width: 100vw;
+    border: 1px dotted;
+    display: flex;
+    justify-content: center;
 }
+
+#footer_content{
+    width: 75%;
+    border: 1px solid;    
+    /* margin-top: 40px; */
+}
+
+/* footer row1 */
+#row1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.row1_headings{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+.row1_content{
+    color: gray;
+    font-size: 14px;
+    display: flex;
+}
+
+/* row1 column1 */
+#column1{
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#online_shopping_content{
+    height: 180px;
+}
+#column1>div>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#useful_links_content{
+    height: 150px;
+}
+
+/* row1 column2 */
+#column2{
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#customer_policies_content{
+    height: 250px;
+}
+#column2>div>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* row1 column3 */
+#column3{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#experience_myntra_app_content{
+    height: 80px;
+    width: 290PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#social_media_icons{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* row1 column4 */
+#column4{
+    height: 170px;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: start;
+}
+.column4_content{
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+
+/* footer row2 */
+#row2{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#heading_and_hr{
+    display: flex;
+    justify-content: space-between;
+}
+#heading_and_hr>hr{
+    width: 87%;
+    height: 1px;
+    margin-top: 5px;
+}
+#popular_searches_content{
+    height: 100px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_us{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+/* footer row3 */
+/* footer row4 */
+
+
+
+
+
+
+
