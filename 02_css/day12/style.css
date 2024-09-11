@@ -9,3 +9,25 @@
 }
 
 /* absent */
+
+div{
+  padding: 20px;
+}
+
+h1{
+  border-width: 20px;
+  border-style: double;
+  border-color: red;
+
+  /* border shorthand */
+  /* border: 1px dotted red; */
+}
+
+h2{
+  padding: 20px;
+  margin: 50px;
+  border-top: 5px double violet;
+  border-right: 5px dashed indigo;
+  border-bottom: 5px dotted blue;
+  border-left: 5px solid green;
+}
