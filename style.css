@@ -13,6 +13,9 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;          
 }
 
 #logo{
@@ -196,15 +199,13 @@ nav{
 footer{
     background-color: #fbfbfd;
     width: 100vw;
-    border: 1px dotted;
     display: flex;
     justify-content: center;
 }
 
 #footer_content{
     width: 75%;
-    border: 1px solid;    
-    /* margin-top: 40px; */
+    
 }
 
 /* footer row1 */
@@ -325,15 +326,43 @@ footer{
 
 
 
-
-
-
-
-
 /* footer row3 */
+#row3{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.row3_content{
+    color: gray;
+    font-size: 14px;
+}
+#row3_row2{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+
 /* footer row4 */
-
-
+#row4{
+    height: 2300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.row4_content{
+    color: gray;
+    font-size: 13px;
+}
+.subheadings{
+    font-weight: bold;
+    color: black;
+}
 
 
 
