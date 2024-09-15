@@ -11,9 +11,8 @@
 let repeatCall = function (func, msg){
     console.log(func(msg));
 }
-function callback(msg){
-    return msg + ' ' + msg ; 
-}
+let callback = (msg) => msg + ' ' + msg;
+
 repeatCall(callback, "let's go!")
 
 
@@ -27,17 +26,11 @@ repeatCall(callback, "let's go!")
 // `callback` should return: `”Approved”`
 
 let decideAction = function (func, action){
-    console.log(func(msg));
+    console.log(func(action));
 }
-function callback(action){
-    if(action == 'proceed'){
-        return "Approved";
-    }
-    else{
-        return 'Denied'
-    }
-}
-repeatCall(callback, 'proceed')
+let callback = (action) => action === 'proceed' ? 'Approved' : 'Denied';
+
+decideAction(callback, 'proceed')
 
 
 
@@ -49,12 +42,12 @@ repeatCall(callback, 'proceed')
 // `repeatMessage(callback, ‘Goodbye’)`  
 // `callback` should return: `”Goodbye Goodbye”`
 
+TODO:
+
 let repeatMessage = function (func, msg){
     console.log(func(msg));    
 }
-function callback(msg){
-    return msg + " " + msg;
-}
+let callback = (msg) => msg + ' ' + msg;
 repeatMessage(callback, 'Goodbye')
 
 
@@ -70,14 +63,7 @@ repeatMessage(callback, 'Goodbye')
 let toggleSwitch = function (func, str){
     console.log(func(str));
 }
-function callback(str){
-    if(str == 'off'){
-        return 'Switched on'
-    }
-    else{
-        return 'Switched off'
-    }
-}
+let callback = (str) => str === 'off' ? 'Switched on' : 'Switched off';
 toggleSwitch(callback, 'off')
 
 
@@ -93,14 +79,9 @@ toggleSwitch(callback, 'off')
 let askYesOrNo = function (func, response){
     console.log(func(response));  
 }
-function callback(response){
-    if(response == 'yes'){
-        return 'Confirmed'
-    }
-    else{
-        return 'Rejected'
-    }
-}
+
+let callback = (response) => response === 'yes' ? 'Confirmed' : 'Rejected';
+
 askYesOrNo(callback, 'yes')
 
 
@@ -138,9 +119,7 @@ reverseText(callback, 'world')
 let createFarewell = function (func, name){
     console.log(func(name));  
 }
-function callback(name){
-    return `Goodbye ${name}`
-}
+let callback = (name) => `Goodbye ${name}!`;
 createFarewell(callback, 'Bob')
 
 
@@ -156,12 +135,5 @@ createFarewell(callback, 'Bob')
 let decisionMaker = function (func, str){
     console.log(func(str));  
 }
-function callback(str){
-    if(str == 'start'){
-        return 'Starting...';
-    }
-    if(str == 'stop'){
-        return 'Stopping...'
-    }
-}
+let callback = (str) => str === 'start' ? 'Starting...' : 'Stopping...';
 decisionMaker(callback, 'start')
