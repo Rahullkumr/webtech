@@ -7,27 +7,92 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* absent */
+
+/* border */
+
+    /* div{
+        width: 250px;
+        height: 250px;
+        border: 1px solid red;
+
+        border-left: 2px solid;
+        border-right: 4px solid;
+        border-top: 6px solid;
+        border-bottom: 8px solid;
+    } */
+
+
+/* style is compulsory */
+
+    /* div{
+        width: 250px;
+        height: 250px;
+        border-color: coral darkseagreen antiquewhite aquamarine;
+        
+        border-width: 50px;
+        border-width: 50px 10px;
+        border-width: 50px 10px 30px;
+        border-width: 50px 40px 30px 20px ;
+
+        border-style: inset;
+        border-style: solid;
+        border-style: groove;
+        border-style: ridge;
+        border-style: hidden;
+        border-style: outset;
+        border-style: solid ridge dashed double;
+    } */
+
+
+/* border properties with border-radius */
+
+    /* div{
+        width: 250px;
+        height: 250px;
+        border-width: 50px 40px 30px 20px ;
+        border-style: solid ridge dashed double;
+        border-color: aqua rebeccapurple palevioletred green;
+
+        border-radius: 50% 20% 25% 80%;
+        border-radius: 50% 0% 0% 0%;
+    } */
+  
 
 div{
-  padding: 20px;
+    width: 400px;
+    height: 400px;
+
+    border-top-style: solid;
+    border-right-style: dashed;
+    border-bottom-style: dotted;
+    border-left-style: double;
+
+    border-top-color: black;
+    border-right-color: red;
+    border-bottom-color: orange;
+    border-left-color: blue;
+
+    border-top-width: 50px;
+    border-right-width: 3px;
+    border-bottom-width: 10px;
+    border-left-width: 20px;
+
+    border-bottom-right-radius: 50%;
 }
 
-h1{
-  border-width: 20px;
-  border-style: double;
-  border-color: red;
-
-  /* border shorthand */
-  /* border: 1px dotted red; */
-}
 
 h2{
-  padding: 20px;
-  margin: 50px;
-  border-top: 5px double violet;
-  border-right: 5px dashed indigo;
-  border-bottom: 5px dotted blue;
-  border-left: 5px solid green;
-}
+    padding: 20px;
+    margin: 50px;
+    border-top: 5px double violet;
+    border-right: 5px dashed indigo;
+    border-bottom: 5px dotted blue;
+    border-left: 5px solid green;
+  } 
