@@ -34,4 +34,7 @@
     4. left  
     5. z-index  
 
+### z-index
+
+    z-index: number  ===> make the div look like stacked(one above another i.e higher is on top)
  
