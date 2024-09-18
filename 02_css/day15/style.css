@@ -1,0 +1,79 @@
+/* 14 - sept - 2024 */
+
+/* transform:
+    1. rotate(degree)
+    2. skew(degree)
+    3. scale(number i.e n-times; 1 is default)
+    4. translate(x-axis, y-axis)
+ */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+div:hover{
+    transform: rotate(45deg);
+    transition-duration: 1s;
+}
+
+/* div:hover{
+    transform:skew(30deg);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: scale(0.5);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(100px);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(0px, 100px);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(100px,100px);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(0,-100px);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(-100px,-100px);
+    transition-duration: 1s;
+} */
+
+/* div:hover{
+    transform: translate(-100px,+100px);
+    transition-duration: 1s;
+} */
+
+
+
+
+
+/* huge thanks to Komal */
