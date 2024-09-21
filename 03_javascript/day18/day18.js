@@ -6,7 +6,7 @@ console.log('============ Ways of declaring an object in js ===============\n\n'
 
 console.log('============ 1. object literal way ===============');
 
-// syntax
+// syntax (99% of the times)
 // let obj = { key: 'value' }
 
 // example
@@ -22,7 +22,6 @@ let car = {
             cname: 'Pune',
             locality: "Deccan"
         }
-
     }
 }
 console.log(car.owner)
@@ -68,7 +67,7 @@ console.log(obj1,obj2);
 
 console.log("============ 4. using factory function ===============");
 
-// factory function is a function that returns an object which we be stored in a variable
+// factory function is a function that returns an object which can be stored in a variable
 
 // syntax
 // let obj = (value) => {
