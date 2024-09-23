@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+}
+
+div {
+    height: 150px;
+    width: 150px;
+    border: 1px solid green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    left: 200px;
+    background-image: linear-gradient(to top, red, orange, yellow, white);
+    /* vvvvi */
+    transform-origin: 550px; 
+}
+
+div:hover {
+    transform: rotate(180deg); 
+    transition: transform 10s ease-in-out; 
+}
