@@ -1,7 +1,7 @@
 // 04 - Sept - 2024
 
 
-// iife = imediate invoke function expression (mujhe rok k dikhao)
+// iife = immediate invoke function expression (mujhe rok k dikhao)
     // every js file is iife
     // iife can be called only once because there is no name to call it later
     // it gets called automatically 

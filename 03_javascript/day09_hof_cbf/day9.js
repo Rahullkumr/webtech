@@ -28,8 +28,3 @@ operation(div,10,20)
 // ======================================================
 
 // internal working of JS
-
-// name 
-// batch code
-// mob no
-
