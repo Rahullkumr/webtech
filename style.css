@@ -15,8 +15,8 @@
     justify-content: space-evenly;
     align-items: center;    
     background-color: rgb(23, 31, 41);
-    color: white;   
-    /* border: 1px solid red; */
+    color: white; 
+    position: sticky;
 }
 
 #logo{
@@ -103,3 +103,12 @@
 }
 
 /* lower navbar */
+#lower_nav{
+    height: 40px;
+    background-color: #232f3f;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
+}
