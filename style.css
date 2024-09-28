@@ -15,7 +15,6 @@
 /* upper navbar */
     #upper_nav{
         display: flex;
-        width: 98vw;
         height: 60px;
         justify-content: space-evenly;
         align-items: center;    
@@ -111,7 +110,6 @@
 /* lower navbar */
     #lower_nav{
         height: 40px;
-        width: 98vw;
         background-color: #232f3f;
         color: white;
         display: flex;
@@ -127,7 +125,6 @@
 /* Delete below main */
 
 main{
-    width: 98vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +142,6 @@ main{
 
     #bottom_signin{
         height: 70px;
-        width: 98vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -178,7 +174,6 @@ main{
 /* footer */
     footer{
         height: 750px;
-        width: 98vw;
     }
 
 /* footer section1 */
