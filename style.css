@@ -122,14 +122,72 @@
 
 
 
-/* Delete below main */
-
+/* main content */
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+    background-color: #e2e6e7;
 }
+.corousal{
+    height: 500px;
+    display: flex;
+    overflow: auto;
+}
+.corousal>img{
+    min-width: 100%;
+}
+
+/* row 1 */
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -280px;
+}
+.o1i{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.row1>div{
+    height: 420px;
+    width: 331px;
+    padding: 20px;
+    background-color: white;
+}
+.row1 a{
+    text-decoration: none;
+    color: rgb(57, 124, 167);
+    font-size: 14px;
+}
+
+
+.o4i{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.o4i section{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+} 
+
+.div4{
+    height: 150px !important;
+}
+.div4 button{
+    background-color: #fed813;
+    border: none;
+    width: 100%;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+/* row 2 */
+
+
+
+
 
 
 
