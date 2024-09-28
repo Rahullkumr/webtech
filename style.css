@@ -10,7 +10,7 @@
 /* upper navbar */
 #upper_nav{
     display: flex;
-    width: 100vw;
+    width: 98vw;
     height: 60px;
     justify-content: space-evenly;
     align-items: center;    
@@ -103,12 +103,103 @@
 }
 
 /* lower navbar */
-#lower_nav{
-    height: 40px;
+    #lower_nav{
+        height: 40px;
+        width: 98vw;
+        background-color: #232f3f;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 14px;
+    }
+
+/* Delete below main */
+
+main{
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+/* bottom signin section */
+    #chota_hr>hr{
+        width: 98%;
+    }
+
+    #bottom_signin{
+        height: 70px;
+        width: 98vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 14px;
+    }
+    #bottom_signin>div>button{
+        background-color: #ffc32d;
+        border: 1px solid goldenrod;
+        width: 100%;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+/* back to top */
+    #back_to_top>a{
+        text-decoration: none; 
+        color: white;
+        height: 100%;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+/* footer: section1 */
+    footer{
+        /* border: 1px solid red; */
+        height: 716px;
+        width: 98vw;
+    }
+
+/* upper footer */
+#footer_sec1{
+    height: 70%;
     background-color: #232f3f;
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+#footer_sec1_content{
+    width: 70%; 
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#footer_sec1_content>ul>li{
+    margin-top: 15px;
     font-size: 14px;
+    color: gainsboro;
+}
+
+
+
+
+
+
+#footer_sec2{
+    /* height: 70%; */
+    background-color: #232f3f;
+    color: white;
+}
+
+/* lower footer */
+#footer_sec3{
+    background-color: #121a22;
+    height: 30%;
+    border: 1px solid cyan;
 }
