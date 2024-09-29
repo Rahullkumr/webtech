@@ -215,7 +215,55 @@
     }
 
 /* row 3 */
+.smooth-corousal{
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    top: -280px;
+}
+.smooth-corousal>.title{
+    display: flex;
+    align-items: end;
+}
+.smooth-corousal .images{
+    margin: 10px;
+    display: flex;
+    min-width: 300px;
+    overflow: auto;
+}
 
+/* row 4 */
+.gapped-corousal{
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffd87d;
+    position: relative;
+    top: -280px;
+}
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    overflow: auto;
+    min-width: 80%;
+}
+.card{
+    height: 350px;
+    width: 20%;
+    background-color: white;
+    margin: 5px;
+    min-width: 260px;
+}
+.card .div1{
+    font-size: .8em;
+}
+.card .div1>.off{
+    color: white;
+    background-color: #cc0d39;
+    padding: 5px;
+}
 
 
 
