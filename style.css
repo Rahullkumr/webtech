@@ -127,6 +127,7 @@
         background-color: #e2e6e7;
         display: flex;
         flex-direction: column;
+        /* height: 607vh; */
     }
     .corousal{
         height: 500px;
@@ -235,7 +236,7 @@
 
 /* row 4 */
 .gapped-corousal{
-    margin: 20px;
+    margin: 0px 20px 0 20px;
     padding: 20px;
     background-color: #ffd87d;
     position: relative;
