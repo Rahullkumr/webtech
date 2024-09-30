@@ -123,6 +123,11 @@
 
 
 /* main content */
+.main-container{
+    position: relative;
+    top: -280px;
+}
+
     main{
         background-color: #e2e6e7;
         display: flex;
@@ -142,8 +147,8 @@
     .make-me-flexible{
         display: flex;
         justify-content: space-evenly;
-        position: relative;
-        top: -280px;
+        /* position: relative;
+        top: -280px; */
     }
     .o1i{
         display: flex;
@@ -220,8 +225,8 @@
     margin: 20px;
     padding: 20px;
     background-color: white;
-    position: relative;
-    top: -280px;
+    /* position: relative;
+    top: -280px; */
 }
 .smooth-corousal>.title{
     display: flex;
@@ -239,8 +244,8 @@
     margin: 0px 20px 0 20px;
     padding: 20px;
     background-color: #ffd87d;
-    position: relative;
-    top: -280px;
+    /* position: relative;
+    top: -280px; */
 }
 .cards-container{
     display: flex;
@@ -269,7 +274,9 @@
 
 
 
-
+@media (max-width: 768px) {
+    /* make it responsive */
+}
 
 
 
