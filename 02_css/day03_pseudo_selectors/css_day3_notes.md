@@ -19,7 +19,7 @@ II. Combinator selector (some kind of combination)
     3. adjacent sibling selector (+) (immediately after - only one is selected)
     4. general sibling selector (~) (at same level)
 
-III. Pseudo selectors
+III. Pseudo class selectors (:)
 
     1. hover effect
     2. active
