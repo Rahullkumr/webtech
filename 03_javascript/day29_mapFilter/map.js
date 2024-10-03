@@ -7,10 +7,10 @@
 // **Input:** `[1, 2, 3, 4, 5]`  
 // **Output:** `[2, 4, 6, 8, 10]`
 
-        // input = [1, 2, 3, 4, 5]
-        // console.log(input);
-        // let rValue = input.map(value => value*2);
-        // console.log(rValue);
+        input = [1, 2, 3, 4, 5]
+        console.log(input);
+        let rValue = input.map(value => value*2);
+        console.log(rValue);
 // ---
 
 // ### Task 2: Convert Temperatures

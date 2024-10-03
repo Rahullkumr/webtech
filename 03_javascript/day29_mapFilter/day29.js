@@ -2,6 +2,9 @@
 
 
 // map filter reduce
+        // arr.map(val, index, wholeArray)                  // returns array
+        // arr.filter(val, index, wholeArray)               // returns array
+        // arr.reduce(accumulator, val, index, wholeArray)  // doesnot return array
 
 let arr = [10,20,30,40,50,60,70,80];
 
