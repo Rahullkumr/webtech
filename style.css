@@ -280,7 +280,22 @@
 
 
 
-
+.smooth{
+    padding: 20px;
+    background-color: white;
+    /* position: relative;  */
+    /* top: -280px; */
+}
+.smooth>.title{
+    display: flex;
+    align-items: end;
+}
+.smooth .images{
+    margin: 10px;
+    display: flex;
+    min-width: 300px;
+    overflow: auto;
+}
 
 
 
