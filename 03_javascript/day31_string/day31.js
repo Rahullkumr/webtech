@@ -3,6 +3,14 @@
 // string and its methods
 
 
+// ways of creating string
+let str1 = 'string'
+let str2 = "string"
+let str3 = `string`
+let str4 = new String()
+
+console.log(str4.length);
+
 
 let str = 'Bahubali'
 
