@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+                'navbar navbar navbar navbar'
+                'sidebar main main main'
+                'sidebar main-content1 main-content2 main-content3'
+                'sidebar footer footer footer';
+            height: 100vh;
+            gap: .1em;
+        }
+        .container div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar{
+            grid-area: navbar;
+            background-color: black;
+        }
+        .sidebar{
+            display: grid;
+            grid-area: sidebar;
+            background-color: green;
+        }
+        .main{
+            grid-area: main;
+            background-color: gray;
+        }
+        .main-content1{
+            grid-area: main-content1;
+            background-color: darkslategray;
+        }
+        .main-content2{
+            grid-area: main-content2;
+            background-color: darkslategray;
+        }
+        .main-content3{
+            grid-area: main-content3;
+            background-color: darkslategray;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: palevioletred;
+        }
+        .item{
+            border: 1px solid;
+            color: white;
+        }
+        @media (max-width: 480px) {
+            .container{
+                display: grid;
+                grid-template-areas: 
+                    'navbar'
+                    'sidebar'
+                    'main'
+                    'main-content1'
+                    'main-content2'
+                    'main-content3'
+                    'footer'
+                ;
+                height: 100vh;
+                gap: .1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item navbar">navbar</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item main">main</div>
+        <div class="item main-content1">main-content</div>
+        <div class="item main-content2">main-content</div>
+        <div class="item main-content3">main-content</div>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+</html>
