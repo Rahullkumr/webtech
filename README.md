@@ -8,6 +8,8 @@ webtech notes
 
 # clones
 
-1. Myntra [see website](https://rahullkumr.github.io/webtech/xyz) || [see code](https://github.com/Rahullkumr/webtech/tree/myntra_clone)
+1. Myntra [see website](https://rahullkumr.github.io/webtech/remove_me) || [see code](https://github.com/Rahullkumr/webtech/tree/myntra_clone)
 
-2. Amazon [see website](https://rahullkumr.github.io/webtech/) || [see code](https://github.com/Rahullkumr/webtech/tree/amazon_clone)
+2. Amazon [see website](https://rahullkumr.github.io/webtech/remove_me) || [see code](https://github.com/Rahullkumr/webtech/tree/amazon_clone)
+
+2. ISRO [see website](https://rahullkumr.github.io/webtech/) || [see code](https://github.com/Rahullkumr/webtech/tree/isro_clone)
