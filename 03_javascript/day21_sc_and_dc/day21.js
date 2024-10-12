@@ -72,3 +72,21 @@ console.log(normalJSObj);
 
 
 
+// how to create DEEP COPY using spread(...) operator
+
+let new_backpack = {
+    item1: 'water bottle',
+    item2: 'tiffin',
+    item3: 'camera',
+    item4: 'torch',
+    item5: 'pant',
+    item6: 'charger'
+}
+
+let deepCopy = {...new_backpack}
+console.log('DC Before updation: ',deepCopy);
+
+deepCopy.name = 'Tinku';
+
+console.log(new_backpack);
+console.log('DC After updation: ',deepCopy);
