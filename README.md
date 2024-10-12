@@ -1,13 +1,19 @@
-# Webtech
+# ISRO clone
 
-webtech notes
+    This project is a clone of the ISRO website. It uses flexbox and grid layout to organize the elements on the page.
 
-1. HTML [Click for Notes](https://www.saketbhatnagar.in/html)
-2. CSS [Click for Notes](https://www.saketbhatnagar.in/css)
-3. JavaScript [Click for Notes](https://www.saketbhatnagar.in/js)
+## Tech Stacks
+- HTML5
+- CSS3
 
-# clones
+## How to run the project
 
-1. Myntra [see website](https://rahullkumr.github.io/webtech/xyz) || [see code](https://github.com/Rahullkumr/webtech/tree/myntra_clone)
+1. Clone the repository
+2. Open the `index.html` file in your browser
 
-2. Amazon [see website](https://rahullkumr.github.io/webtech/) || [see code](https://github.com/Rahullkumr/webtech/tree/amazon_clone)
+## Screenshot
+
+![ISRO Clone](./ISRO_clone.png)
+
+## Live Demo
+[Click here](https://rahullkumr.github.io/webtech/)
