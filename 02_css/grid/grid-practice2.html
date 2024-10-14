@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #796441;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+        section{
+            height: 400px;
+            width: 500px;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        div{
+            background-color: white;
+            /* grid-area: small; */
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .big1{
+            grid-column: 3/span 2;
+            grid-row: 1/span 2;
+        }
+        .big2{
+            grid-column: 1/span 2;
+            grid-row: 3/span 2;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div class="big1"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class='big2'></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
