@@ -33,6 +33,11 @@
             let [r3_e1, r3_e2] = matrix[2]
             console.log(r1_e1,r1_e2,r2_e1,r2_e2,r3_e1,r3_e2);       // 1 2 3 4 5 6
 
+        // sir's way:
+            const matrix = [[1, 2], [3, 4], [5, 6]]
+            let [[a,b],[c,d],[e,l]] = matrix
+            console.log(a,b,c,d,e,l)
+
 
 
 // 4.	**Destructuring an Object**:  
@@ -82,6 +87,12 @@
             let {city}      = person.details.address
             let {country}   = person.details.address
             console.log(name, age, city, country);      // Bob 25 New York USA
+
+        //=================== sir's way (copy paste keys) ===================
+
+            const person = { name: 'Bob', details: { age: 25, address: { city: 'New York', country: 'USA' } } }
+            let {name, details: {age, address: {city,country}}} = person
+            console.log(name, age, city, country)
 
 
             
@@ -183,6 +194,17 @@
             let val = calculateTotal(1,2,3)
             console.log(val);       // 6
 
+        //=================== sir's way ===================
+
+            let priceValues = [100, 200, 300]
+            let calculateTotal = (...priceValues)=>{      // rest Operator
+                let sum = priceValues.reduce((acc, val)=>{
+                    return acc += val 
+                });
+                console.log(sum)
+            }
+            calculateTotal(...priceValues)
+
 
 
 // 18.	**Combining Rest and Spread**:  
@@ -196,6 +218,13 @@
                 console.log(mergedArray);           // [1, 2, 8, 9, 11, 22]
             }
             combineArrays([1,2], [8,9], [11,22])
+
+        //=================== sir's way ===================
+
+            function combineArrays(...lotOfArrays){
+                console.log(lotOfArrays)
+            }
+            combineArrays(...[1,2,3], ...[11, 22, 33] )
 
 
 
