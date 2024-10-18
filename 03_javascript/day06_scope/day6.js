@@ -8,8 +8,8 @@ console.log(a); // what is its default keyword
 // scope == boundary
 // 1. Global scope      (accessible for entire js file)
 // 2. Local/block scope (accessible for the block only)
-//      1. 
-//      2. 
+//      1. fn scope
+//      2. block scope
 
 
 // const b = 30
