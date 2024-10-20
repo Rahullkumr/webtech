@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    background-color: gray;
+}
+div{
+    background-color: wheat;
+}
+
+/* ========================= event handling ==================================== */
+/* 3 ways to use event */
