@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <!-- 
+    // what is Event Handling?
+        // The process of responding to events, such as user interactions (clicks, key presses, mouse movements) or changes in the browser environment (loading of a page, resizing of the window). 
+        // This is done using event listeners, which are functions that handle the events.
+            // - Event: An action or occurrence recognized by the browser (e.g., clicking a button, submitting a form).
+            // - Event Listener: A function that "listens" for a specific event on an element and executes code when that event occurs.
+            // - Event Object: An object that provides information about the event (e.g., the element that triggered it, the type of event). 
+    -->
+
+
+    <!-- onClick() using html tag -->
+    <button onclick="changebg1()">changebg using onclick() in html file</button><br><br>
+    
+
+
+ 
+    <!-- onClick() using JS -->
+    <button id="button2">changebg from JS file</button> <br><br>
+
+
+
+    <!-- onClick using event handling -->
+    <button id="button3">changebg using event handling (addEventListener)</button><br><br>
+
+
+    <input type="text">
+    <h1 id="heading" class="headingClass" style="color: red">something will happen here, start giving input</h1>
+
+    <script>
+
+        let {body} = document
+
+        // 3 ways to use event:
+            // way1: change bgcolor using 'onclick()' from html file (as attribute)
+                    let changebg1 = ()=>{
+                        body.style.backgroundColor = '#123';
+                        console.log('background color changed using buttton 1');
+                    }
+
+
+            // way2: change bgcolor using 'onclick' from JS file (DOM manipulation)
+                    let changebgbutton = document.getElementById('button2')
+                    let changebg2 = ()=>{
+                        body.style.backgroundColor = 'teal';
+                        console.log('background color changed using buttton 2');
+                    };
+                    changebgbutton.onclick = changebg2;
+
+
+            // way3: change bgcolor using  (EventListener)
+                    let changebgbutton3 = document.getElementById('button3');            
+                    changebgbutton3.addEventListener("click",(e)=>{
+                        body.style.backgroundColor = '#abc';
+                        console.log('background color changed using buttton 3');
+                    });
+
+
+
+            // display on user input
+            let str = ''
+            let heading = document.querySelector('h1')
+            let input = document.querySelector('input')
+
+            input.addEventListener("input", (e)=>{
+                if (e.data !== null) {
+                    str += e.data
+                    heading.innerText = str  
+                }  else{
+                    str = str.slice(0, -1)
+                }
+            });
+
+
+    </script>
+</body>
+</html>
