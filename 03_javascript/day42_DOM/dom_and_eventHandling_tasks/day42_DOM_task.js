@@ -5,65 +5,66 @@ let {body} = document
 // 1. **Change Background Color:**
 //    - Create a button with a label like “Change Background”. Write a function that will change the background color of the entire page when this button is clicked. You can allow the user to choose a random color or pick a predefined color.
 
-        // let btn1 = document.createElement('button');
-        // btn1.innerHTML = `<button onclick="changebg()">Change Background</button>`; // innerHTML overwrites above btn1
-        // body.append(btn1)
-        // let changebg = ()=>{
-        //     body.style.backgroundColor = 'teal'
-        // }
+        let btn1 = document.createElement('button');
+        btn1.innerHTML = `<button onclick="changebg()">Change Background</button>`; // innerHTML overwrites above btn1
+        let changebg = ()=>{
+                let rc = Math.floor(Math.random()*100);
+                body.style.backgroundColor = `#${rc}5f${rc}`;   // eg: #ff0000 (red)
+        }
+        body.append(btn1);
 
 
 
 // 2. **Text Update:**
 //    - Add a paragraph element to your HTML with some initial text (e.g., “Click the button to change this text.”). Create a button labeled “Update Text”. Write a function that, when the button is clicked, changes the paragraph text to something else (e.g., “Text updated!”).
 
-        // let str = 'Click the button to change this text.'
-        // let p2 = document.createElement('p')
-        // p2.innerHTML = str;
-        // let btn2 = document.createElement('button')
-        // btn2.innerHTML = `Update Text`;
-        // btn2.onclick = ()=>{
-        //     str = 'Text updated!';
-        //     p2.innerHTML = str;
-        // };
-        // body.append(p2,btn2);
+        let str = 'Click the button to change this text.'
+        let p2 = document.createElement('p')
+        p2.innerHTML = str;
+        let btn2 = document.createElement('button')
+        btn2.innerHTML = `Update Text`;
+        btn2.onclick = ()=>{
+            str = 'Text updated!';
+            p2.innerHTML = str;
+        };
+        body.append(p2,btn2);
 
 
 
 // 3. **Hide/Show Element:**
 //    - Add a div with some content and a button labeled “Hide/Show”. Write a function that hides the div when the button is clicked for the first time, and shows it again when clicked the second time. Use a boolean or toggle to keep track of whether the div is visible or hidden.
 
-        // let str = "lets play hide and seek";
-        // var isHidden = false;
-        // let div = document.createElement('div');
-        // div.innerHTML = str;
-        // let btn3 = document.createElement('button');
-        // btn3.innerHTML = "Hide/Show";
-        // btn3.onclick = ()=>{
-        //     if(isHidden){
-        //         isHidden = false;
-        //         div.style.display = 'block';                              
-        //     }else{
-        //         isHidden = true;
-        //         div.style.display = 'none';                              
-        //     }
-        // };
-        // body.append(div,btn3); 
+        let str3 = "lets play hide and seek";
+        var isHidden = false;
+        let div = document.createElement('div');
+        div.innerHTML = str3;
+        let btn3 = document.createElement('button');
+        btn3.innerHTML = "Hide/Show";
+        btn3.onclick = ()=>{
+            if(isHidden){
+                isHidden = false;
+                div.style.display = 'block';                              
+            }else{
+                isHidden = true;
+                div.style.display = 'none';                              
+            }
+        };
+        body.append(div,btn3); 
 
 
 
 // 4. **Add New Item to List:**
 //    - Create an input field and an empty unordered list (ul) in your HTML. Below the input, add a button labeled “Add Item”. Write a function that, when the button is clicked, adds the value from the input field as a new list item (li) to the unordered list. Make sure to clear the input field after adding the item.
 
-        // let input = document.createElement('input');
-        // let btn4 = document.createElement('button');
-        // btn4.innerHTML = 'Add Item';
-        // let unordered_empty_list = document.createElement('ul');
-        // btn4.onclick = ()=>{
-        //     let val = input.value;
-        //     unordered_empty_list.innerHTML = `<li>${val}</li>`;
-        // };
-        // body.append(input, btn4,unordered_empty_list); 
+        let input = document.createElement('input');
+        let btn4 = document.createElement('button');
+        btn4.innerHTML = 'Add Item';
+        let unordered_empty_li = document.createElement('ul');
+        btn4.onclick = ()=>{
+            let val = input.value;
+            unordered_empty_li.innerHTML = `<li>${val}</li>`;
+        };
+        body.append(input, btn4,unordered_empty_li); 
 
 
 
@@ -119,26 +120,109 @@ let {body} = document
 // 21. **Button Hover Event:**
 //     - Add a button labeled “Hover Me”. Write a function that changes the background color of the button when the user hovers over it and reverts the color when the mouse leaves.
 
+                let hoverbtn = document.getElementById('hoverbtn');
+                hoverbtn.addEventListener('mouseover', ()=>{
+                        hoverbtn.style.backgroundColor = 'green';
+                });
+                hoverbtn.addEventListener('mouseout', ()=>{
+                        hoverbtn.style.backgroundColor = '';
+                });
+
 // 22. **Form Submission Event:**
 //     - Create a simple form with an input field and a submit button. Write a function that prevents the form from being submitted if the input is empty, and display an error message below the form. Use `event.preventDefault()` to prevent form submission.
+
+                let input22 = document.getElementById('input22');
+                let btn22 = document.getElementById('btn22');
+                let error22 = document.getElementById('error22');
+                btn22.addEventListener('click', (e)=>{
+                        if(input22.value == ''){
+                                e.preventDefault();
+                                error22.innerText = 'Please enter some text';
+                                error22.style.color = 'red';
+                        }else{
+                                error22.innerText = '';
+                        }
+                });
+
+
 
 // 23. **Keyboard Event:**
 //     - Add an input field. Write a function that listens for the “Enter” key and triggers an alert when it’s pressed inside the input field. Make sure the function only works for the “Enter” key.
 
+                let input23 = document.getElementById('input23');
+                input23.addEventListener('keypress', (e)=>{
+                        if(e.key === 'Enter'){
+                                alert("Enter button pressed");
+                        }
+                });
+
+
+
 // 24. **Double-Click Event:**
 //     - Create a div with some content and write a function that changes its background color when it’s double-clicked. The background should change every time a double-click event occurs.
+
+                let changebgDiv24 = document.getElementById('changebgDiv24');
+                changebgDiv24.addEventListener('dblclick',(e)=>{
+                        let rn = Math.floor(Math.random()*100);
+                        changebgDiv24.style.backgroundColor = `#${rn}4f${rn}`;  // eg: #0000ff (blue)
+                });
+
+
 
 // 25. **Key Press Counter:**
 //     - Add an input field and a paragraph that displays the number of times a key has been pressed inside the input field. Write a function that increments the count with every keypress and updates the paragraph.
 
+                let input25 = document.getElementById('input25')
+                let para25 = document.getElementById('para25')
+                let count = 0;
+                input25.addEventListener('keypress',(e)=>{
+                        if(e.key){
+                                count++;
+                                para25.innerText = `${count}`;
+                        }
+                });
+
+
+
 // 26. **Mouse Movement Tracker:**
 //     - Write a function that tracks the mouse’s position on the page in real-time and displays the current x and y coordinates in a div. Update the coordinates every time the mouse moves.
+
+                let div26 = document.getElementById('div26')
+                body.addEventListener('mousemove',(e)=>{
+                        div26.innerText = `mouse coordinates: (${e.clientX},${e.clientY})`;
+                });
+
+
 
 // 27. **Right-Click Event:**
 //     - Add an element to your page, like a button or div. Write a function that triggers an alert when the user right-clicks on the element. Use the `contextmenu` event to handle the right-click.
 
+                let btn27 = document.getElementById('btn27')
+                btn27.addEventListener('contextmenu', (e)=>{
+                        e.preventDefault();
+                        alert('Right-click not allowed');
+                });
+
+
+
 // 28. **Mouse Over Event:**
 //     - Create a div or paragraph with some text. Write a function that changes its text or color when the mouse is moved over the element and changes it back when the mouse leaves.
 
+                let para28 = document.getElementById('para28')
+                para28.addEventListener('mouseover', (e)=>{
+                        para28.innerText = 'You won a Jaddu Ki Jhappi 🤗🎉'
+                }); 
+                para28.addEventListener('mouseout', (e)=>{
+                        para28.innerText = 'Hover on me to see magic'
+                }); 
+
 // 29. **Focus Event:**
 //     - Add an input field. Write a function that changes the input field’s border color when it gains focus and reverts the color when it loses focus. Use the `focus` and `blur` events for this.
+
+                let input29 = document.getElementById('input29')
+                input29.addEventListener('focus', (e)=>{
+                        input29.style.border = '10px solid red';
+                });
+                input29.addEventListener('blur', (e)=>{
+                        input29.style.border = '';
+                });
