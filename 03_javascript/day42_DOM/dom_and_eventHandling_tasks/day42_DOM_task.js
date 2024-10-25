@@ -13,6 +13,12 @@ let {body} = document
         }
         body.append(btn1);
 
+        // use color picker
+//     <input type="color" id = 'colorpick'>
+
+         
+
+
 
 
 // 2. **Text Update:**
@@ -71,47 +77,150 @@ let {body} = document
 // 5. **Remove Last Item from List:**
 //    - Add an unordered list with a few predefined list items (li). Below the list, add a button labeled “Remove Last Item”. Write a function that, when the button is clicked, removes the last item from the list. Make sure the function works even when the list is empty (i.e., it shouldn’t break).
 
+document.getElementById('btn5').addEventListener('click', () => {
+        let ul = document.getElementById('ul');
+        if (ul.lastElementChild) {
+            ul.removeChild(ul.lastElementChild);
+        }
+});
 
 
 
 // 6. **Toggle Class:**
 //    - Create a div element with some initial style, like a background color or border. Add a button labeled “Toggle Style”. Write a function that toggles a specific class on the div when the button is clicked. The class should change the div’s appearance (e.g., different color or border style).
 
+document.getElementById('btn6').addEventListener('click', ()=>{
+        document.getElementById('div6').style.backgroundColor = 'green';
+});
+
+
+
 // 7. **Change Image Source:**
 //    - Add an image element with an initial source. Below the image, add two buttons labeled “Change to Image 1” and “Change to Image 2”. Write functions for both buttons that change the image’s source to a different URL when clicked.
+
+document.getElementById('btn7a').addEventListener('click', ()=>{
+        document.getElementById('changeMySrc').src = 'https://picsum.photos/200/300';
+});
+document.getElementById('btn7b').addEventListener('click', ()=>{
+        document.getElementById('changeMySrc').src = 'https://picsum.photos/200/300.jpg';
+});
+
+
 
 // 8. **Create Elements Dynamically:**
 //    - Add a button labeled “Add Paragraph”. Write a function that, when the button is clicked, creates a new paragraph element and appends it to the document body. The paragraph should contain some text (e.g., “This is a new paragraph!”).
 
+let sectn = document.getElementById('sectn')
+document.getElementById('btn8').addEventListener('click', function() {
+        const p = document.createElement('p');
+        p.textContent = 'This is a new paragraph!';
+        sectn.append(p);
+});
+
+
+
 // 9. **Disable Button After Click:**
 //    - Add a button labeled “Click Me”. Write a function that disables the button (i.e., makes it unclickable) after it’s been clicked once. You can change the button’s text to indicate that it’s been disabled (e.g., “Button Disabled”).
+
+document.getElementById('btn9').addEventListener('click', function(e) {
+        e.target.disabled = true;
+        e.target.textContent = 'Button Disabled';
+});
+
 
 // 10. **Display Input Text:**
 //     - Create an input field and a div below it. Write a function that, as the user types into the input field, displays the same text in the div In real-time. This can be achieved by listening for the input event and updating the div’s inner text with the input’s current value.
 
+document.getElementById('input10').addEventListener('input', function(e) {
+        document.getElementById('displayHere').textContent = e.target.value;
+});
+
+
+
 // 11. **Change Text Color on Hover:**
 //     - Add a paragraph element with some text. Write a function that changes the text color when the mouse hovers over the paragraph and reverts the color back to its original state when the mouse leaves.
+
+document.getElementById('hoverPara').addEventListener('mouseover', ()=>{
+        document.getElementById('hoverPara').style.color = 'blue'
+});
+document.getElementById('hoverPara').addEventListener('mouseout', ()=>{
+        document.getElementById('hoverPara').style.color = ''
+});
+
+
 
 // 12. **Display Current Date and Time:**
 //     - Add a button labeled “Show Date and Time”. Write a function that, when the button is clicked, displays the current date and time in a div below the button. You can use JavaScript’s `Date` object to get the current date and time.
 
+document.getElementById('btn12').addEventListener('click', ()=>{
+        let currentD = new Date();
+        document.getElementById('showDateTime').innerText = currentD.toString();
+});
+
+
+
 // 13. **Remove Element:**
 //     - Add a div or any other element with some content. Below it, add a button labeled “Remove Element”. Write a function that removes the element from the DOM when the button is clicked.
 
+document.getElementById('btn13').addEventListener('click', function() {
+        const element = document.getElementById('removeMe');
+        if (element) element.remove();
+});
+
+
+
 // 14. **Count Button Clicks:**
 //     - Create a button labeled “Click Counter”. Below the button, add a paragraph that displays the number of times the button has been clicked (e.g., “Button clicked 0 times”). Write a function that increments the count every time the button is clicked.
+let btn14 = document.getElementById('btn14') 
+let btnClicks = 0
+btn14.addEventListener('click', ()=>{
+        btnClicks++;
+        document.getElementById('showCount').innerText = btnClicks;
+})
+
+
 
 // 15. **Display Window Width:**
 //     - Add a div that will display the current window width. Write a function that updates the width in the div whenever the user resizes the window. You can listen for the `resize` event and use `window.innerWidth` to get the current width.
+function updateWindowWidth() {
+        document.getElementById('windowWidthDisplay').textContent = `Window width: ${window.innerWidth}px`;
+}
+window.addEventListener('resize', updateWindowWidth);
+updateWindowWidth(); // Initial call
+
+
 
 // 16. **Add Class to All Elements:**
 //     - Add a few paragraph elements to the page. Below them, add a button labeled “Add Class”. Write a function that, when the button is clicked, adds a specific class (e.g., a class that changes the text color) to all the paragraph elements on the page.
+document.getElementById('addClassBtn').addEventListener('click', function() {
+        document.querySelectorAll('p').forEach(p => p.classList.add('highlight'));
+      });
+
+
 
 // 17. **Input Validation:**
 //     - Create a form with a text input field and a submit button. Write a function that validates the input field when the form is submitted. If the field is empty, display an error message below the form and prevent the form from being submitted.
+document.getElementById('validationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = document.getElementById('validationInput');
+        const error = document.getElementById('validationError');
+        if (input.value.trim() === '') {
+            error.textContent = 'Please fill out this field.';
+        } else {
+            error.textContent = '';
+            alert('Form submitted successfully!');
+        }
+});
+
+
 
 // 18. **Change Font Size:**
 //     - Add a paragraph with some text. Below the paragraph, add a button labeled “Increase Font Size”. Write a function that increases the font size of the paragraph by 2px every time the button is clicked.
+let fontSize = 16;
+document.getElementById('increaseFontSizeBtn').addEventListener('click', function() {
+  fontSize += 2;
+  document.getElementById('changeFontSizeParagraph').style.fontSize = `${fontSize}px`;
+});
 
 
 
