@@ -201,7 +201,8 @@
 
 
 
-// 4. Prototypes and Inheritance 
+// ====================================================================================
+//                              4. Prototypes and Inheritance 
 // ====================================================================================
 
 
@@ -214,7 +215,8 @@
 
 
 
-// 5. Closures 
+// ====================================================================================
+//                      5. Closures 
 // ====================================================================================
 
 
@@ -225,7 +227,8 @@
 
 
 
-// 6. Event Handling 
+// ====================================================================================
+//                      6. Event Handling 
 // ====================================================================================
 
 
@@ -237,7 +240,8 @@
 
 
 
-// 7. Asynchronous JavaScript 
+// ====================================================================================
+//                      7. Asynchronous JavaScript 
 // ====================================================================================
 
 
@@ -254,7 +258,8 @@
 
 
 
-// 8. Error Handling
+// ====================================================================================
+//                         8. Error Handling ✅
 // ====================================================================================
 
 
@@ -262,11 +267,26 @@
 // How do you handle exceptions in JavaScript? 
 // What is a try-catch-finally block in JavaScript? 
 // How do you create a custom error in JavaScript? 
+    // create a custom error by extending the built-in Error class.
+    // eg:
+        // class CustomError extends Error {
+        //     constructor(message) {
+        //       super(message);
+        //       this.name = 'CustomError';
+        //     }
+        //   }        
+        //   throw new CustomError('Something went wrong!');
+      
 // What is the throw keyword used for? 
+    // used to manually raise an error  
+    // When an error is thrown, the program stops executing, and the nearest catch block (if any) will handle the error.
+    // eg:
+        // throw new Error('This is an error message.');
 
 
 
-// 9. DOM Manipulation 
+// ====================================================================================
+//                          9. DOM Manipulation 
 // ====================================================================================
 
 
@@ -280,8 +300,8 @@
 // How do you add or remove a class from an element in JavaScript? 
 
 
-
-// 10. ES6 Features 
+// ====================================================================================
+//                          10. ES6 Features ✅
 // ====================================================================================
 
 
@@ -296,7 +316,8 @@
 
 
 
-// 11. JavaScript and the Browser 
+// ====================================================================================
+//                          11. JavaScript and the Browser ✅
 // ====================================================================================
 
 
@@ -307,7 +328,8 @@
 
 
 
-// 12. Hoisting, Scope, and this 
+// ====================================================================================
+//                          12. Hoisting, Scope, and this ✅
 // ====================================================================================
 
 
@@ -321,9 +343,60 @@
 
 
 
-// 13. Other Topics 
+// ====================================================================================
+//                              13. Other Topics ✅
 // ====================================================================================
 
 
 // Explain the concept of currying. 
+    // currying is a functional programming concept in JS where a fn with multiple parameters is converted into a chain/series of fns, each one having only one parameter
+    // named after American Mathematician Haskell Curry
+    // useful for: code readability and to prevent repetation
+    // eg:
+        // Regular function:
+            // function simpleFunction(param1, param2, param3) {
+            //     return param1 + param2 + param3;
+            // }
+
+        // Curried function:
+            // function curriedFunction(param1) {
+            //     return function(param2) {
+            //         return function(param3) {
+            //             return param1 + param2 + param3;
+            //         };
+            //     };
+            // }
+
+            
+
 // What is the difference between deep copy and shallow copy?
+    // deep copy and shallow copy are two different ways of copying an object or array in JS.
+    // SHALLOW COPY:
+        // ANY CHANGES TO THE COPIED NESTED ARRAY/OBJ IS REFLECTED TO THE ORIGINAL ARRAY/OBJ
+        // A shallow copy of an array/obj creates a new object but doesn't creates copies of nested arrays/objects; instead, it copies the references to the original nested objects
+        // As a result, changes to nested objects in the copied version will affect the original object, because both the original and the copy share references to the same nested objects.
+        // eg (SHALLOW COPY):
+
+            // 1. Using Object.assign() for Objects:
+                // const original = { a: 1, b: { c: 2 } };
+                // const shallowCopy = Object.assign({}, original);                
+                // shallowCopy.b.c = 42;
+                // console.log(original.b.c); // Output: 42 (original is affected)    
+            
+            // 2. Using Spread Operator for Arrays:
+                // const originalArray = [1, 2, [3, 4]];
+                // const shallowCopyArray = [...originalArray];
+                
+                // shallowCopyArray[2][0] = 99;
+                // console.log(originalArray[2][0]); // Output: 99 (original array is affected)
+
+    // DEEP COPY:
+        // ANY CHANGES TO THE COPIED NESTED ARRAY/OBJ IS NOT REFLECTED TO THE ORIGINAL ARRAY/OBJ
+        // it creates a new copy of nested object/array also.
+        // eg (DEEP COPY):
+
+            // 1. Using JSON.parse(JSON.stringify()) ======> works for arrays, objects and strings also:
+                // const original = { a: 1, b: { c: 2 } };
+                // const deepCopy = JSON.parse(JSON.stringify(original));
+                // deepCopy.b.c = 42;
+                // console.log(original.b.c); // Output: 2 (original is not affected)
