@@ -20,6 +20,7 @@ let merge_me3 = {
 // this will merge all into merge_into_me variable
 let final_merge = Object.assign(merge_into_me, merge_me1,merge_me2,merge_me3)
 console.log(merge_into_me);
+console.log(final_merge);
 
 
 // but what if I want the merged data to be stored in final_merge1 variable
@@ -32,8 +33,6 @@ console.log(final_merge);
 
 
 // shallow copy
-
-let person
 
 // deep copy: the changes in new object should not affect main object
 
@@ -72,7 +71,7 @@ console.log(normalJSObj);
 
 
 
-// how to create DEEP COPY using spread(...) operator
+// how to create SHALLOW COPY using spread(...) operator
 
 let new_backpack = {
     item1: 'water bottle',
@@ -90,3 +89,6 @@ deepCopy.name = 'Tinku';
 
 console.log(new_backpack);
 console.log('DC After updation: ',deepCopy);
+
+
+// refer JS interview qn solution file for better understanding
