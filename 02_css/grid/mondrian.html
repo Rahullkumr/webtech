@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(105, 99, 82);
+    }
+    .container{
+      height: 748px;
+      width: 748px;
+      background-color: black;
+      display: grid;
+      gap: 9px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 132px 155px 20px;
+
+    }
+    .div1{
+      background-color: #E72F24;
+    }
+    .div2{
+      grid-column: span 3;
+    }
+    .div3{
+      grid-row: span 2;
+    }
+    .div4{
+      grid-row: span 2; 
+      grid-column: span 2; 
+    }
+    .div6{
+      grid-row: span 2; 
+    }
+    .div2, .div3, .div4, .div6, .div7{
+      background-color: #F0F1EC;
+    }
+    .div5{
+      background-color: #004592;
+      border-bottom: 10px solid;
+    }
+    .div8{
+      background-color: #F9D01E;
+    }
+    .div9{
+      background-color: #232629;
+    }
+  </style>
+</head>
+
+<body>
+   <div class="container">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+    <div class="div9"></div>
+   </div>
+</body>
+
+</html>
