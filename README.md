@@ -16,4 +16,4 @@
 ![Amazon Clone](./amazon_clone.png)
 
 ## Live Demo
-[Click here](https://amazon-clone-seven-iota-22.vercel.app/)
+[Click here](https://amazonhomepageclone.vercel.app/)
