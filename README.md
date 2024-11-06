@@ -17,4 +17,4 @@
 ![Myntra Clone](./clone_myntra.png)
 
 ## Live Demo
-[Click here](https://rahullkumr.github.io/webtech/)
+[Click here](https://myntra-clone-jade-pi.vercel.app/)
