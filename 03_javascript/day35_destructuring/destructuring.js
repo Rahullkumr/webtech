@@ -65,18 +65,18 @@ let new_backpack = {
 
 console.log(new_backpack);
 
-console.log({...new_backpack});     // deep copy
+console.log({...new_backpack});     // shallow copy
 
 
 
 
 
-// =================== DEEP COPY using ... (spread operator) ===================
+// =================== SHALLOW COPY using ... (spread operator) ===================
 
-let deepCopy = {...new_backpack}
-console.log('DC Before updation: ',deepCopy);
+let shallowCopy = {...new_backpack}
+console.log('sC Before updation: ',shallowCopy);
 
-deepCopy.name = 'Tinku';
+shallowCopy.name = 'Tinku';
 
 console.log(new_backpack);
-console.log('DC After updation: ',deepCopy);
+console.log('sC After updation: ',shallowCopy);
