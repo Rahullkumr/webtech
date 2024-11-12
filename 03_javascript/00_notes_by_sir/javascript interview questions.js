@@ -40,7 +40,7 @@
 
 
 // What is the difference between var, let, and const? 
-    // see(and run) day5 html file
+    // see(and run) day5.html file
 
 
 
@@ -188,12 +188,164 @@
 
 
 // What are objects in JavaScript? 
+    // An Object is a block of memory which has state(variable) and behaviour(methods) where we can store heterogenous data.
+    // An object is a collection of key-value pairs that can contain various data types, such as numbers, strings, arrays, functions, and other objects.
+    // In one object we can have multiple key-value pairs and is separated by ',' comma.
+    // We can access value of object using (.) Operator or square bracket [] , object reference and key_name
+    
+    // All object keys (except Symbol) are automatically converted into string by js engine.
+        `
+            const obj = { 2: "two", 1: "one" };
+            console.log(obj); // { "1": "one", "2": "two" }
+        `
+    // If keys are in Number, js engine will convert them into string and arrange them in ascending order.
+        `
+            const obj = { 2: "two", 1: "one" };
+            console.log(obj); // { "1": "one", "2": "two" }
+        `
+    // To write space separated keys , we have to enclose keys with double quotes.
+    // If we want to use computed property (where key is determined at runtime) or user defined property as key, then we have to use square brackets and variable name or expression like [userId_${input_value}].
+        `
+            const prefix = "user";
+            const id = 101;
+            const obj = {['${prefix}_${id}']: "John Doe"}  // evaluates to 'user_101'};
+            console.log(obj); // { "user_101": "John Doe" }            
+        `
+    
+    // If key is same as variable name which hold the value , instead of writing key:value we can write key.
+        `
+            let phone = 8800425635;
+            let obj = {
+                phone,
+                // phone:phone
+            }
+        `
+
+
+
 // How do you create an object in JavaScript? 
-// What is the difference between dot notation and bracket notation for accessing object 
-// properties? 
+    // 1. using curly braces { } and literals
+        `
+            let obj = { key: 'value' }
+            let emptyObj = {}
+        `
+    // 2. using new keyword and Object() Constructor
+        `
+            let obj = new Object();     // empty object
+            obj.name = "Mangru";
+        `
+    // 3. using new keyword and Constructor function
+        `
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            const person1 = new Person("John", 30);
+        `
+    // 4. using new keyword and Class
+        `
+            class MyClass{
+                constructor(value){
+                    this.key = value       
+                }
+            }
+            let obj = new MyClass(value)
+        `
+    // 5. using factory function
+        // factory function is a function that returns an object each time its called
+        `
+            let Student = (name, add) => {
+                return { name, add };
+            }
+            let Student1 = Student('Lalit', 'Pune')
+            let Student2 = Student('Nikku', 'Nagpur')
+        `
+
+
+
+// What is the difference between dot notation and bracket notation for accessing object properties? 
+    `
+        // dot . notation:
+            let obj = { name: "Mohit", age: 24}
+            console.log(obj.name)           // Mohit
+
+        // bracket [] notation:
+            let obj = { 'first name': "Mohit", age: 24}
+            console.log(obj['first name'])  // Mohit
+    ` 
+    // USAGE: 
+        // use . notation when key is a one word
+        // use [] notation when key has special characters or when key is having dynamic values
+
+
+
 // How do you merge two objects in JavaScript? 
-// How do you clone an object? 
+    // 1. Using Object.assign() for shallow merge
+        `
+            const obj1 = { name: "Palaki", age: 30 };
+            const obj2 = { age: 35, add: {city: "Panaji", state: "Goa"}};
+            const mergedObj = Object.assign({}, obj1, obj2);
+        `
+    // 2. Using the Spread Operator (...) for shallow merge
+        `
+            const obj1 = { name: "Palaki", age: 30 };
+            const obj2 = { age: 35, add: {city: "Panaji", state: "Goa"}};
+            const mergedObj = {...obj1, ...obj2};
+        `
+    // 3.  Using JSON.parse(JSON.stringify()) for Deep Copy merge
+        `
+            const obj1 = { name: "Palaki", age: 30 };
+            const obj2 = { age: 35, add: {city: "Panaji", state: "Goa"}};
+            const mergedObj = JSON.parse(JSON.stringify({...obj1, ...obj2}));
+        `
+
+
+
+// How do you clone an object? (same as above)
+    // 1. Using Object.assign() for shallow clone
+        `
+            const obj = { name: "Palaki", age: 35, add: {city: "Panaji", state: "Goa"}};
+            const clonedObj = Object.assign({}, obj);
+        `
+    // 2. Using the Spread Operator (...) for shallow clone
+        `
+            const obj = { name: "Palaki", age: 35, add: {city: "Panaji", state: "Goa"}};
+            const clonedObj = {...obj};
+        `
+    // 3.  Using JSON.parse(JSON.stringify()) for Deep clone
+        `
+            const obj = { name: "Palaki", age: 35, add: {city: "Panaji", state: "Goa"}};
+            const deepClonedObj = JSON.parse(JSON.stringify(obj));
+        `
+
+
+
 // What is object destructuring? 
+    // The process of extracting values from an object into variables.
+    `
+        let obj = { name:"chombi", age:16 }
+        let {name,age,country} = obj;       // OBJECT DESTRUCTURING
+        console.log(name);      // chombi
+        console.log(age);       // 16
+        console.log(country );  // undefined
+    `
+    // All the key names present on LHS are consider as variables
+    // The variable names should be same as key names
+    // Js engine will search for the key inside the object.
+        // If the key is present , the value is extracted and stored into variable.
+        // else, undefined is store into variable
+    // After destructuring , we can directly access variable names, without using object reference
+
+// Some important methods related to objects:
+// 1. Object.keys(obj)          ➡️ Returns an array of the object's keys
+// 2. Object.values(obj)        ➡️ Returns an array of the object's values
+// 3. Object.entries(obj)       ➡️ Returns an array of the object's property in [key, value] pairs format
+// 4. Object.seal(obj)          ➡️ Seals an object, meaning you cannot add or remove properties, but existing properties can still be modified
+// 5. Object.freeze(obj)        ➡️ Freezes an object, making it immutable (cannot be modified
+// 6. Object.assign(target, ...sources)    ➡️ Copies properties from one or more source objects into target object and returns the modified target.
+
+
+
 // What are arrays in JavaScript? 
 // What is array destructuring? 
 // How can you find the length of an array in JavaScript? 
