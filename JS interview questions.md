@@ -1,6 +1,6 @@
-<h1 style="text-align: center; color: red; font-size: 50px">JavaScript Interview Questions</h1>
+<h1 align="center">JavaScript Interview Questions</h1>
 
-<h1 style="text-align: center; color: teal; font-size: 30px">I. Basic Concepts</h1>
+<h1 align="center">I. Basic Concepts</h1>
 
 ### 1. What is JavaScript?
 - JavaScript is a scripting and programming language.
@@ -60,12 +60,16 @@
 
 ### 9. How Can You Check if a Value is NaN?
 - ```javascript
-  console.log('10years' - 10);    // NaN
-  console.log('hi' - 'hi');       // NaN
-  console.log(false / 0);         // NaN
-  console.log(undefined - 10);    // NaN
-  console.log(Number(undefined)); // NaN
-  console.log(Number('10a'));     // NaN
+   let v = NaN;
+   console.log(isNaN(v));     // true
+
+   //when will NaN shows up?
+   console.log('10years' - 10);    // NaN
+   console.log('hi' - 'hi');       // NaN
+   console.log(false / 0);         // NaN
+   console.log(undefined - 10);    // NaN
+   console.log(Number(undefined)); // NaN
+   console.log(Number('10a'));     // NaN
   ```
 
 ### 10. What is the Use of `typeof` Operator in JavaScript?
@@ -82,27 +86,217 @@
   console.log(typeof obj); // Output: "object"
   console.log(typeof arr); // Output: "object"
   ```
+
+
+
+
+
 ---
-<h1 style="text-align: center; color: teal; font-size: 30px">II. Functions and Scope </h1>
 
-<h1 style="text-align: center; color: teal; font-size: 30px">III. Objects and Arrays</h1>
+<h1 align="center">II. Functions and Scope </h1>
 
-<h1 style="text-align: center; color: teal; font-size: 30px">IV. Prototypes and Inheritance</h1>
+<h1 align="center">III. Objects and Arrays</h1>
 
-<h1 style="text-align: center; color: teal; font-size: 30px">V. Closures</h1>
 
-<h1 style="text-align: center; color: teal; font-size: 30px">VI. Event Handling</h1>
+# JavaScript Objects
 
-<h1 style="text-align: center; color: teal; font-size: 30px">VII. Asynchronous JavaScript</h1>
+## What are Objects in JavaScript?
 
-<h1 style="text-align: center; color: teal; font-size: 30px">VIII. Error Handling</h1>
+- An Object is a block of memory which has state(variable) and behaviour(methods) where we can store heterogenous data.
+- Objects are collections of key-value pairs that can contain various data types such as numbers, strings, arrays, functions, and other objects.
+- Multiple key-value pairs in an object are separated by commas `,`.
+- Values can be accessed using the dot (`.`) operator or square brackets `[]` with the object reference and key name.
 
-<h1 style="text-align: center; color: teal; font-size: 30px">IX. DOM Manipulation</h1>
+### Key Points:
+1. All object keys (except `Symbol`) are automatically converted into strings by the JavaScript engine.
+   ```javascript
+   const obj = { 2: "two", 1: "one" };
+   console.log(obj); // { "1": "one", "2": "two" }
+   ```
 
-<h1 style="text-align: center; color: teal; font-size: 30px">X. ES6 Features</h1>
+2. Numeric keys are converted to strings and arranged in ascending order.
+   ```javascript
+   const obj = { 2: "two", 1: "one" };
+   console.log(obj); // { "1": "one", "2": "two" }
+   ```
 
-<h1 style="text-align: center; color: teal; font-size: 30px">XI. JavaScript and the Browser</h1>
+3. For space-separated keys, enclose them in double quotes.
+4. To use computed or dynamically determined keys, use square brackets:
+   ```javascript
+   const prefix = "user";
+   const id = 101;
+   const obj = { [`${prefix}_${id}`]: "John Doe" };
+   console.log(obj); // { "user_101": "John Doe" }
+   ```
 
-<h1 style="text-align: center; color: teal; font-size: 30px">XII. Hoisting, Scope, and this</h1>
+5. If a key name is the same as the variable holding its value, you can write just the key:
+   ```javascript
+   let phone = 8800425635;
+   let obj = { phone }; // Equivalent to { phone: phone }
+   ```
 
-<h1 style="text-align: center; color: teal; font-size: 30px">XIII. Other Topics</h1>
+---
+
+## How to Create an Object in JavaScript?
+
+1. **Using curly braces `{}` and literals**:
+   ```javascript
+   let obj = { key: 'value' };
+   let emptyObj = {};
+   ```
+
+2. **Using the `new` keyword and `Object()` constructor**:
+   ```javascript
+   let obj = new Object(); // Creates an empty object
+   obj.name = "Mangru";
+   ```
+
+3. **Using the `new` keyword and a constructor function**:
+   ```javascript
+   function Person(name, age) {
+       this.name = name;
+       this.age = age;
+   }
+   const person1 = new Person("John", 30);
+   ```
+
+4. **Using the `new` keyword and a class**:
+   ```javascript
+   class MyClass {
+       constructor(value) {
+           this.key = value;
+       }
+   }
+   let obj = new MyClass(value);
+   ```
+
+5. **Using a factory function**:
+   - A factory function returns a new object each time it's called.
+   ```javascript
+   let Student = (name, address) => {
+       return { name, address };
+   };
+   let student1 = Student('Lalit', 'Pune');
+   let student2 = Student('Nikku', 'Nagpur');
+   ```
+
+---
+
+## Dot Notation vs Bracket Notation
+
+### Dot Notation:
+```javascript
+let obj = { name: "Mohit", age: 24 };
+console.log(obj.name); // Mohit
+```
+
+### Bracket Notation:
+```javascript
+let obj = { 'first name': "Mohit", age: 24 };
+console.log(obj['first name']); // Mohit
+```
+
+### Usage:
+- Use dot notation when the key is a single word.
+- Use bracket notation when the key contains special characters or is dynamically determined.
+
+---
+
+## How to Merge Two Objects in JavaScript?
+
+1. **Using `Object.assign()` for a shallow merge**:
+   ```javascript
+   const obj1 = { name: "Palaki", age: 30 };
+   const obj2 = { age: 35, add: { city: "Panaji", state: "Goa" } };
+   const mergedObj = Object.assign({}, obj1, obj2);
+   ```
+
+2. **Using the Spread Operator (`...`) for a shallow merge**:
+   ```javascript
+   const obj1 = { name: "Palaki", age: 30 };
+   const obj2 = { age: 35, add: { city: "Panaji", state: "Goa" } };
+   const mergedObj = { ...obj1, ...obj2 };
+   ```
+
+3. **Using `JSON.parse(JSON.stringify())` for a deep copy merge**:
+   ```javascript
+   const obj1 = { name: "Palaki", age: 30 };
+   const obj2 = { age: 35, add: { city: "Panaji", state: "Goa" } };
+   const mergedObj = JSON.parse(JSON.stringify({ ...obj1, ...obj2 }));
+   ```
+
+---
+
+## How to Clone an Object?
+
+1. **Using `Object.assign()` for a shallow clone**:
+   ```javascript
+   const obj = { name: "Palaki", age: 35, add: { city: "Panaji", state: "Goa" } };
+   const clonedObj = Object.assign({}, obj);
+   ```
+
+2. **Using the Spread Operator (`...`) for a shallow clone**:
+   ```javascript
+   const obj = { name: "Palaki", age: 35, add: { city: "Panaji", state: "Goa" } };
+   const clonedObj = { ...obj };
+   ```
+
+3. **Using `JSON.parse(JSON.stringify())` for a deep clone**:
+   ```javascript
+   const obj = { name: "Palaki", age: 35, add: { city: "Panaji", state: "Goa" } };
+   const deepClonedObj = JSON.parse(JSON.stringify(obj));
+   ```
+
+---
+
+## What is Object Destructuring?
+
+- Object destructuring is the process of extracting values from an object into variables.
+   ```javascript
+   let obj = { name: "Chombi", age: 16 };
+   let { name, age, country } = obj; // Destructuring
+   console.log(name); // Chombi
+   console.log(age); // 16
+   console.log(country); // undefined
+   ```
+
+### Key Points:
+1. The variable names on the left-hand side (LHS) must match the keys in the object.
+2. If the key is not present in the object, the variable is assigned `undefined`.
+3. After destructuring, variables can be used directly without referencing the object.
+
+---
+
+## Important Methods Related to Objects
+
+1. `Object.keys(obj)` ➡️ Returns an array of the object's keys.
+2. `Object.values(obj)` ➡️ Returns an array of the object's values.
+3. `Object.entries(obj)` ➡️ Returns an array of the object's properties in `[key, value]` pairs format.
+4. `Object.seal(obj)` ➡️ Seals an object, preventing adding or removing properties (modification of existing properties is allowed).
+5. `Object.freeze(obj)` ➡️ Freezes an object, making it immutable (no modifications allowed).
+6. `Object.assign(target, ...sources)` ➡️ Copies properties from one or more source objects into the target object and returns the modified target.
+
+
+
+
+
+
+<h1 align="center">IV. Prototypes and Inheritance</h1>
+
+<h1 align="center">V. Closures</h1>
+
+<h1 align="center">VI. Event Handling</h1>
+
+<h1 align="center">VII. Asynchronous JavaScript</h1>
+
+<h1 align="center">VIII. Error Handling</h1>
+
+<h1 align="center">IX. DOM Manipulation</h1>
+
+<h1 align="center">X. ES6 Features</h1>
+
+<h1 align="center">XI. JavaScript and the Browser</h1>
+
+<h1 align="center">XII. Hoisting, Scope, and this</h1>
+
+<h1 align="center">XIII. Other Topics</h1>

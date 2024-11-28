@@ -11,7 +11,7 @@
         // - Loosely typed
         // - oopl
         // - interepreted lang
-        // - It is synchronous language , it has single threaded architecture
+        // - It is synchronous language, it has single threaded architecture
 
 
 
@@ -98,6 +98,14 @@
 //                              2. Functions and Scope 
 // ====================================================================================
 
+// types of fns:
+// 1. fn declaration
+// 2. fn as an expression
+// 3. iife 
+// 4. arrow fn
+// 5. anonymous fn 
+// 6. hof 
+// 7. cbf 
 
 // What is a function in JavaScript? 
     // fn is a block of code which is used to do some specific task and it gets executed when we call it.
@@ -116,7 +124,7 @@
 
 // What is the difference between a function declaration and a function expression? 
     // Definition	
-            // Uses function keyword and a name.	
+            // Uses `function` keyword and a name.	
             // Function assigned to a variable, may be named or anonymous.
     // Hoisting
             // fully Hoisted name + body	
