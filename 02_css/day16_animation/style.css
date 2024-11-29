@@ -21,7 +21,7 @@ div{
     from{}
     to{
         background-color: black;
-        border: 100px solid orange;
+        /* border: 100px solid orange; */
         border-radius: 50%;
     }
     
