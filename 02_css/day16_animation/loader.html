@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Loader animation</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        div{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border: 20px solid gray;
+            border-top: 10px solid rgb(22, 199, 22);
+            animation-name: loder;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-timing-function: linear;   
+        }
+        @keyframes loder {
+            from{}
+            to{
+                transform: rotate(360deg);
+            }
+        }        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
